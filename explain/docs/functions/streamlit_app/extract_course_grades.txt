@@ -1,0 +1,50 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: extract_course_grades()
+SOURCE FILE: streamlit_app.py
+SOURCE LINE (before adding documentation comments): 170
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/streamlit_app.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Attempts to read numeric course grades from a text-based transcript.
+
+2. WHY DOES THE PROJECT NEED IT?
+Looks for catalog course codes and nearby percentages or numbers; keeps a grade only when there is one plausible candidate.
+
+3. INPUTS / PARAMETERS
+page_texts, catalog_course_ids
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Prepares found for later processing.
+2. Prepares code_lookup for later processing.
+3. Loops through enumerate(page_texts, start=1).
+4. Returns list(found.values()).
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+Not explicitly declared; see the return statements below.
+Observed return expressions:
+- list(found.values())
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+enumerate, list, normalize_course_code, found.values, re.sub('[\\u200e\\u200f\\u202a-\\u202e\\ufeff]', ' ', line).strip, (page_text or '').splitlines, re.findall, re.sub, code_lookup.items, ' '.join, len, float, unique.append, re.escape, max, min
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+Treat detected grades as suggestions for review, not guaranteed transcript truth.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Best-effort numeric grade extraction for text-based transcript PDFs.
+
+The existing course-attempt/status extraction remains unchanged. A detected
+grade is presented for review because PDF table reading order varies.
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

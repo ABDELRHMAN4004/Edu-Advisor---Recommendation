@@ -1,0 +1,33 @@
+EDU ADVISOR FUNCTION DOCUMENTATION — INDEX
+
+recommender.py : create_student_input -> docs/functions/recommender/create_student_input.txt
+recommender.py : EduAdvisor__print_recommendation -> docs/functions/recommender/EduAdvisor__print_recommendation.txt
+recommender.py : EduAdvisor__search_course_by_name -> docs/functions/recommender/EduAdvisor__search_course_by_name.txt
+recommender.py : EduAdvisor__search_courses_by_name -> docs/functions/recommender/EduAdvisor__search_courses_by_name.txt
+recommender.py : EduAdvisor__get_all_courses -> docs/functions/recommender/EduAdvisor__get_all_courses.txt
+recommender.py : EduAdvisor__get_course_info -> docs/functions/recommender/EduAdvisor__get_course_info.txt
+recommender.py : EduAdvisor___check_graduation_eligibility -> docs/functions/recommender/EduAdvisor___check_graduation_eligibility.txt
+recommender.py : EduAdvisor__recommend -> docs/functions/recommender/EduAdvisor__recommend.txt
+recommender.py : EduAdvisor___score_course -> docs/functions/recommender/EduAdvisor___score_course.txt
+recommender.py : EduAdvisor___check_eligibility -> docs/functions/recommender/EduAdvisor___check_eligibility.txt
+recommender.py : EduAdvisor___prerequisites_met -> docs/functions/recommender/EduAdvisor___prerequisites_met.txt
+recommender.py : EduAdvisor___get_failed_course_recommendation -> docs/functions/recommender/EduAdvisor___get_failed_course_recommendation.txt
+recommender.py : EduAdvisor__get_failed_courses_status -> docs/functions/recommender/EduAdvisor__get_failed_courses_status.txt
+recommender.py : EduAdvisor__get_course_availability -> docs/functions/recommender/EduAdvisor__get_course_availability.txt
+recommender.py : EduAdvisor__validate_courses -> docs/functions/recommender/EduAdvisor__validate_courses.txt
+recommender.py : EduAdvisor__get_overall_grade -> docs/functions/recommender/EduAdvisor__get_overall_grade.txt
+recommender.py : EduAdvisor__calculate_gpa -> docs/functions/recommender/EduAdvisor__calculate_gpa.txt
+recommender.py : EduAdvisor___build_indexes -> docs/functions/recommender/EduAdvisor___build_indexes.txt
+recommender.py : EduAdvisor___specialization_matches -> docs/functions/recommender/EduAdvisor___specialization_matches.txt
+recommender.py : EduAdvisor___category_priority -> docs/functions/recommender/EduAdvisor___category_priority.txt
+recommender.py : EduAdvisor___normalize_course_type -> docs/functions/recommender/EduAdvisor___normalize_course_type.txt
+recommender.py : EduAdvisor___load_all_data -> docs/functions/recommender/EduAdvisor___load_all_data.txt
+recommender.py : EduAdvisor____init__ -> docs/functions/recommender/EduAdvisor____init__.txt
+streamlit_app.py : display_recommendations -> docs/functions/streamlit_app/display_recommendations.txt
+streamlit_app.py : build_recommendations_pdf -> docs/functions/streamlit_app/build_recommendations_pdf.txt
+streamlit_app.py : extract_course_grades -> docs/functions/streamlit_app/extract_course_grades.txt
+streamlit_app.py : extract_cumulative_gpa -> docs/functions/streamlit_app/extract_cumulative_gpa.txt
+streamlit_app.py : course_label -> docs/functions/streamlit_app/course_label.txt
+streamlit_app.py : load_advisor -> docs/functions/streamlit_app/load_advisor.txt
+streamlit_app.py : extract_course_attempts -> docs/functions/streamlit_app/extract_course_attempts.txt
+streamlit_app.py : normalize_course_code -> docs/functions/streamlit_app/normalize_course_code.txt

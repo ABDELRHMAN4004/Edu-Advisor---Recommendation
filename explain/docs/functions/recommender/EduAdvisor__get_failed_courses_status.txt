@@ -1,0 +1,46 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: EduAdvisor.get_failed_courses_status()
+SOURCE FILE: recommender.py
+SOURCE LINE (before adding documentation comments): 289
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/recommender.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Explains the registration situation of courses the student previously failed.
+
+2. WHY DOES THE PROJECT NEED IT?
+Checks course existence, availability, prerequisites, and whether retaking is possible in the selected semester.
+
+3. INPUTS / PARAMETERS
+self, student: StudentInput, current_semester: int
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Prepares failed_courses_status for later processing.
+2. Loops through student.failed_courses.
+3. Returns failed_courses_status.
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+Dict
+Observed return expressions:
+- failed_courses_status
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+self.get_course_availability, self._prerequisites_met, set, self._get_failed_course_recommendation
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+The result is a status explanation, not a guarantee of enrollment.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Check failed courses and when they can be retaken.
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

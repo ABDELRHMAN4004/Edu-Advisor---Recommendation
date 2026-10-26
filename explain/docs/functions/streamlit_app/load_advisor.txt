@@ -1,0 +1,44 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: load_advisor()
+SOURCE FILE: streamlit_app.py
+SOURCE LINE (before adding documentation comments): 116
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/streamlit_app.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Loads and caches the EduAdvisor engine for Streamlit.
+
+2. WHY DOES THE PROJECT NEED IT?
+Constructs EduAdvisor with the project data directory and lets Streamlit reuse the object.
+
+3. INPUTS / PARAMETERS
+No parameters
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Returns EduAdvisor(data_dir=DATA_DIR).
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+Not explicitly declared; see the return statements below.
+Observed return expressions:
+- EduAdvisor(data_dir=DATA_DIR)
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+EduAdvisor
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+This is Streamlit-specific caching, not a FastAPI endpoint.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+No original docstring is provided.
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

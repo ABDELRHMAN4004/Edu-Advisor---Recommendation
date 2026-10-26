@@ -1,0 +1,56 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: EduAdvisor.get_overall_grade()
+SOURCE FILE: recommender.py
+SOURCE LINE (before adding documentation comments): 221
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/recommender.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Turns a numeric GPA into a grade description.
+
+2. WHY DOES THE PROJECT NEED IT?
+Checks the configured GPA bands and returns Excellent, Very Good, Good, Acceptable, or Fail.
+
+3. INPUTS / PARAMETERS
+self, gpa: Optional[float]
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Checks whether gpa is None.
+2. Prepares ranges for later processing.
+3. Loops through ranges.items().
+4. Checks whether gpa >= 3.6.
+5. Checks whether gpa >= 3.0.
+6. Checks whether gpa >= 2.4.
+7. Checks whether gpa >= 2.0.
+8. Returns 'Fail'.
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+Optional[str]
+Observed return expressions:
+- 'Fail'
+- None
+- 'Excellent'
+- 'Very Good'
+- 'Good'
+- 'Acceptable'
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+self.rules.get, ranges.items, float, bounds.get
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+Uses configured ranges first, then a fallback for small gaps between ranges.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Return the overall grade label configured in bylaws_rules.json.
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

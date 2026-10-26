@@ -1,0 +1,51 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: EduAdvisor._check_eligibility()
+SOURCE FILE: recommender.py
+SOURCE LINE (before adding documentation comments): 350
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/recommender.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Decides whether a course can enter the recommendation candidate list.
+
+2. WHY DOES THE PROJECT NEED IT?
+Rejects already passed courses; treats failed courses as mandatory retake candidates; otherwise checks prerequisites.
+
+3. INPUTS / PARAMETERS
+self, course_id: str, student: StudentInput, passed: Set[str]
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Checks whether course_id in passed.
+2. Checks whether course_id in student.failed_courses.
+3. Prepares (met, missing) for later processing.
+4. Checks whether not met.
+5. Returns (True, []).
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+Tuple[bool, List[str]]
+Observed return expressions:
+- (True, [])
+- (False, ['Already passed'])
+- (True, ['Mandatory retake: failed course available this semester'])
+- (False, [f"Missing prerequisites: {', '.join(missing)}"])
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+self._prerequisites_met, ', '.join
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+The failed-course exception deliberately skips a normal prerequisite check; review it before changing policy.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Check if a course is eligible for the student
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

@@ -1,0 +1,50 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: EduAdvisor.print_recommendation()
+SOURCE FILE: recommender.py
+SOURCE LINE (before adding documentation comments): 682
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/recommender.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Prints a human-readable recommendation report in the terminal.
+
+2. WHY DOES THE PROJECT NEED IT?
+Calls recommend and prints student details, warnings, and recommended courses.
+
+3. INPUTS / PARAMETERS
+self, student: StudentInput
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Prepares result for later processing.
+2. Checks whether result['status']['graduation_eligible'].
+3. Checks whether result['status']['academic_warning'].
+4. Prepares level_name for later processing.
+5. Checks whether result['student']['failed_courses'].
+6. Checks whether not result['recommendations'].
+7. Loops through result['recommendations'].
+8. Loops through result['requirements_breakdown'].items().
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+None
+The function may update the UI or print results instead of returning a value.
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+self.recommend, print, result['bylaws_info'].get('level_names', {}).get, result['requirements_breakdown'].items, str, rec.get, result['bylaws_info'].get, isinstance, len, ', '.join, ' | '.join, key.replace('_', ' ').title, key.replace
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+For a web or mobile application, use the returned dictionary from recommend instead of terminal output.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Print recommendations in a formatted way
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

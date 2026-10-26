@@ -1,0 +1,61 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: EduAdvisor.recommend()
+SOURCE FILE: recommender.py
+SOURCE LINE (before adding documentation comments): 449
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/recommender.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Builds the final set of recommended courses for a student.
+
+2. WHY DOES THE PROJECT NEED IT?
+Chooses the GPA source, scans available courses, filters by specialization and eligibility, scores candidates, sorts them, includes mandatory retakes, fills remaining credit capacity, and builds the response.
+
+3. INPUTS / PARAMETERS
+self, student: StudentInput, max_credits: int, min_credits: int, top_n: int, current_semester: int
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Prepares calculated_gpa for later processing.
+2. Checks whether calculated_gpa is not None.
+3. Prepares passed for later processing.
+4. Prepares candidates for later processing.
+5. Loops through sorted(self.all_courses).
+6. Prepares selected for later processing.
+7. Prepares total_credits for later processing.
+8. Prepares selected_ids for later processing.
+9. Loops through candidates.
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+Dict
+Observed return expressions:
+- {'student': {'student_id': student.student_id, 'current_level': student.current_level, 'current_semester': current_semester, 'completed_credits': student.completed_credits, 'gpa': student.gpa, 'overal
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+set, sorted, candidates.sort, sum, self._check_graduation_eligibility, self.rules.get, max, self.calculate_gpa, self.get_course_availability, self._check_eligibility, selected.append, selected_ids.add, self._specialization_matches, self._score_course, course.get, self._category_priority
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+Mandatory retakes can exceed the maximum credit target; top_n and credit limits do not work like a simple top-score ranking.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Main recommendation method.
+
+Args:
+    student: StudentInput object with student data
+    max_credits: Maximum credits to recommend
+    min_credits: Minimum credits to recommend
+    top_n: Maximum number of courses to recommend
+
+Returns:
+    Dictionary with recommendations and status
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

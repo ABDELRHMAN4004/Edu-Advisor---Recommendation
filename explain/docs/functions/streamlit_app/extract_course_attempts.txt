@@ -1,0 +1,52 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: extract_course_attempts()
+SOURCE FILE: streamlit_app.py
+SOURCE LINE (before adding documentation comments): 33
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/streamlit_app.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Finds course attempts and pass/fail markers in extracted PDF text.
+
+2. WHY DOES THE PROJECT NEED IT?
+Reads each page line by line, tracks X and Y/¥ markers, detects course codes, maps them to catalog IDs, and records their positions and order.
+
+3. INPUTS / PARAMETERS
+page_texts, catalog_course_ids
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Prepares catalog_by_normalized_id for later processing.
+2. Prepares generic_code_pattern for later processing.
+3. Prepares bidi_chars for later processing.
+4. Prepares attempts for later processing.
+5. Loops through enumerate(page_texts, start=1).
+6. Returns attempts.
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+Not explicitly declared; see the return statements below.
+Observed return expressions:
+- attempts
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+re.compile, dict.fromkeys, enumerate, normalize_course_code, map, (page_text or '').splitlines, raw_line.translate(bidi_chars).upper().strip, re.sub, bool, generic_code_pattern.finditer, generic_code_pattern.search, re.search, attempts.append, raw_line.translate(bidi_chars).upper, ''.join, found.append
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+Text extraction order varies by PDF; unknown statuses and unfamiliar codes need review.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Extract course attempts without assuming a particular student's transcript.
+
+Uses the live course catalog for matching, plus a generic code pattern so that
+unfamiliar codes are retained for review instead of silently discarded.
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

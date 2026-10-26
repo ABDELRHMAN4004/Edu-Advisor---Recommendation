@@ -1,0 +1,43 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: EduAdvisor.__init__()
+SOURCE FILE: recommender.py
+SOURCE LINE (before adding documentation comments): 52
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/recommender.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Creates the recommendation engine and prepares it to answer requests.
+
+2. WHY DOES THE PROJECT NEED IT?
+Sets the data folder, reads the academic data, then creates lookup tables.
+
+3. INPUTS / PARAMETERS
+self, data_dir: str | Path
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Prepares self.data_dir for later processing.
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+Not explicitly declared; see the return statements below.
+The function may update the UI or print results instead of returning a value.
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+self._load_all_data, self._build_indexes, Path, Path(__file__).resolve
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+The JSON files must exist before an EduAdvisor instance can be created.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+No original docstring is provided.
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

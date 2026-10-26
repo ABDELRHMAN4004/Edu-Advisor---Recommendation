@@ -1,0 +1,46 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: EduAdvisor._prerequisites_met()
+SOURCE FILE: recommender.py
+SOURCE LINE (before adding documentation comments): 343
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/recommender.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Checks whether the student has passed every prerequisite of a course.
+
+2. WHY DOES THE PROJECT NEED IT?
+Compares the course prerequisite list against the passed-course set and returns missing codes.
+
+3. INPUTS / PARAMETERS
+self, course_id: str, passed: Set[str]
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Prepares required for later processing.
+2. Prepares missing for later processing.
+3. Returns (len(missing) == 0, missing).
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+Tuple[bool, List[str]]
+Observed return expressions:
+- (len(missing) == 0, missing)
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+self.prereq_map.get, len
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+All listed prerequisites must be present in the passed set.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Check if all prerequisites are met, return (met, missing_list)
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

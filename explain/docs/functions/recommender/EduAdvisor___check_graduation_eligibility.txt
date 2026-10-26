@@ -1,0 +1,48 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: EduAdvisor._check_graduation_eligibility()
+SOURCE FILE: recommender.py
+SOURCE LINE (before adding documentation comments): 613
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/recommender.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Checks the basic graduation thresholds used by the engine.
+
+2. WHY DOES THE PROJECT NEED IT?
+Returns True when completed credits and GPA meet the configured minimums.
+
+3. INPUTS / PARAMETERS
+self, student: StudentInput
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Prepares total_required for later processing.
+2. Prepares min_gpa for later processing.
+3. Checks whether student.completed_credits >= total_required and student.gpa is not None and (student.gpa >= min_gpa).
+4. Returns False.
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+bool
+Observed return expressions:
+- False
+- True
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+self.rules.get
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+This simplified check does not verify every category or administrative graduation requirement.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Check if student is eligible for graduation
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

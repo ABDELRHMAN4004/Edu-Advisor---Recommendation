@@ -1,0 +1,141 @@
+{
+  "institution": "Fayoum University",
+  "faculty": "Faculty of Computers and Information",
+  "program": "Bachelor's Degree in Computers and Information",
+  "system": "Credit Hour System",
+  "year": 2019,
+  
+  "total_credits_required": 144,
+  "min_gpa_for_graduation": 2.0,
+  "max_gpa": 4.0,
+  
+  "credit_hours_per_level": {
+    "1": 36,
+    "2": 36,
+    "3": 36,
+    "4": 36
+  },
+  
+  "semester_limits": {
+    "min_credits": 12,
+    "max_credits": 18,
+    "summer_min": 6,
+    "summer_max": 12
+  },
+  
+  "academic_rules": {
+    "warning_gpa": 2.0,
+    "max_warning_semesters": 3,
+    "probation_credits_limit": 12,
+    "retake_limit": 3
+  },
+  
+  "attendance_rules": {
+    "min_percentage": 75,
+    "warning_percentage": 20,
+    "bar_percentage": 25
+  },
+  
+  "examination_rules": {
+    "final_exam_percentage": 60,
+    "mid_exam_percentage": 20,
+    "course_work_percentage": 20,
+    "min_final_exam_grade": 30,
+    "min_pass_grade": 50,
+    "incomplete_grade_threshold": 60
+  },
+  
+  "requirements": {
+    "university": {
+      "total_credits": 14,
+      "compulsory": 9,
+      "elective": 5,
+      "courses": ["UNI001", "UNI002", "UNI005", "UNI006", "UNI011", "UNI003", "UNI004", "UNI007", "UNI009"]
+    },
+    "faculty": {
+      "total_credits": 6,
+      "courses": ["BS111", "BS112", "BS133"]
+    },
+    "basic_sciences": {
+      "total_credits": 32,
+      "compulsory": 30,
+      "elective": 2,
+      "courses": ["BS101", "BS102", "BS201", "BS203", "CS102", "CS201", "BS103", "BS104", "BS105", "BS202", "BS301", "BS241", "CS202", "CS203", "CS302"]
+    },
+    "basic_computing": {
+      "total_credits": 39,
+      "compulsory": 36,
+      "elective": 3,
+      "courses": ["CS101", "CS141", "CS142", "CS211", "CS241", "IT381", "CS322", "CS361", "CS391", "IT352", "IS201", "IS231", "CS321", "CS341", "CS318", "IS211", "IS312", "IT351", "IT371"]
+    },
+    "specialization": {
+      "total_credits": 48,
+      "compulsory": 24,
+      "elective": 24
+    },
+    "projects_training": {
+      "total_credits": 11,
+      "courses": ["IS221", "CS381", "CS481", "CS482", "IS453", "IS454", "IT461", "IT462"]
+    }
+  },
+  
+  "specializations": {
+    "CS": {
+      "name": "Computer Science",
+      "required_courses": ["CS311", "CS342", "CS352", "CS441", "CS471", "CS401", "CS431", "CS462"],
+      "elective_count": 8,
+      "total_credits": 48
+    },
+    "IS": {
+      "name": "Information Systems",
+      "required_courses": ["IS311", "IS341", "IS342", "IS414", "IS418", "IS442", "IS415", "IS431"],
+      "elective_count": 8,
+      "total_credits": 48
+    },
+    "IT": {
+      "name": "Information Technology",
+      "required_courses": ["IT311", "IT431", "IT451", "IT481", "IT482"],
+      "elective_count": 8,
+      "total_credits": 48
+    }
+  },
+  
+  "grade_points": {
+    "A+": 4.0,
+    "A": 3.6,
+    "B+": 3.3,
+    "B": 3.0,
+    "C+": 2.6,
+    "C": 2.4,
+    "D+": 2.2,
+    "D": 2.0,
+    "F": 0.0
+  },
+  
+  "overall_grade": {
+    "Excellent": {"min": 3.6, "max": 4.0},
+    "Very Good": {"min": 3.0, "max": 3.59},
+    "Good": {"min": 2.4, "max": 2.99},
+    "Acceptable": {"min": 2.0, "max": 2.39},
+    "Fail": {"min": 0.0, "max": 1.99}
+  },
+  
+  "level_names": {
+    "1": "Freshman",
+    "2": "Sophomore",
+    "3": "Junior",
+    "4": "Senior"
+  },
+  
+  "withdrawal_rules": {
+    "regular_semester_weeks": 4,
+    "summer_weeks": 2,
+    "min_credits_after_withdrawal": 12
+  },
+  
+  "summer_training": {
+    "required": true,
+    "min_weeks": 4,
+    "level_required": 4
+  }
+}

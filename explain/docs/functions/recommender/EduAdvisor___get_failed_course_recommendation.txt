@@ -1,0 +1,47 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: EduAdvisor._get_failed_course_recommendation()
+SOURCE FILE: recommender.py
+SOURCE LINE (before adding documentation comments): 327
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/recommender.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Creates a readable message about retaking one failed course.
+
+2. WHY DOES THE PROJECT NEED IT?
+Reports missing prerequisites, immediate availability, or the next available semester.
+
+3. INPUTS / PARAMETERS
+self, course_id: str, current_semester: int, availability: Dict, prereq_met: bool
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Checks whether not prereq_met.
+2. Checks whether current_semester in availability['semesters'].
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+str
+Observed return expressions:
+- f' Cannot retake {course_id} - Missing prerequisites'
+- f' {course_id} is available this semester - RECOMMENDED TO RETAKE'
+- f' {course_id} will be available in Semester {next_semester}'
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+min
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+The message is advisory text; actual registration rules must still be checked.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Generate recommendation for failed course
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

@@ -1,0 +1,51 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: EduAdvisor.get_course_availability()
+SOURCE FILE: recommender.py
+SOURCE LINE (before adding documentation comments): 260
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/recommender.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Reports which semester numbers can offer a course according to the engine’s current rule.
+
+2. WHY DOES THE PROJECT NEED IT?
+Checks that the course exists; allows Fall and Spring, and also Summer for level-four courses.
+
+3. INPUTS / PARAMETERS
+self, course_id: str
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Checks whether course_id not in self.all_courses.
+2. Prepares course for later processing.
+3. Prepares course_level for later processing.
+4. Prepares available_semesters for later processing.
+5. Checks whether course_level == 4.
+6. Returns {'available': True, 'semesters': available_semesters, 'reason': f"Available in semesters: {', '.join(map(str, available_.
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+Dict
+Observed return expressions:
+- {'available': True, 'semesters': available_semesters, 'reason': f"Available in semesters: {', '.join(map(str, available_semesters))}"}
+- {'available': False, 'semesters': [], 'reason': f' Course {course_id} not found'}
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+int, available_semesters.append, ', '.join, map
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+This is a generic availability rule, not proof that the course is actually on the current registration schedule.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Check if a course is available in which semesters.
+Returns: {available: bool, semesters: List[int], reason: str}
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

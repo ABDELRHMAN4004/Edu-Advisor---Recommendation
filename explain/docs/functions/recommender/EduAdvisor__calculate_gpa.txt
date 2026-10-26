@@ -1,0 +1,54 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: EduAdvisor.calculate_gpa()
+SOURCE FILE: recommender.py
+SOURCE LINE (before adding documentation comments): 182
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/recommender.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Calculates a credit-weighted GPA using the student’s letter grades.
+
+2. WHY DOES THE PROJECT NEED IT?
+Validates each course and grade, looks up grade points and course credits, applies the retake cap, and divides total weighted points by graded credits.
+
+3. INPUTS / PARAMETERS
+self, student: StudentInput
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Prepares weighted_points for later processing.
+2. Prepares total_graded_credits for later processing.
+3. Prepares retaken for later processing.
+4. Loops through student.grades.items().
+5. Checks whether total_graded_credits == 0.
+6. Returns round(weighted_points / total_graded_credits, 4).
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+Optional[float]
+Observed return expressions:
+- round(weighted_points / total_graded_credits, 4)
+- None
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+set, student.grades.items, round, str(raw_course_id).strip, str(raw_grade).strip().upper, float, int, ValueError, min, str, str(raw_grade).strip, self.grade_points.get, ', '.join, self.grade_points.keys
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+It does not invent grades for courses that have no recorded grade; returns None when nothing can be calculated.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Calculate weighted GPA from course grades and catalog credit hours.
+
+`student.grades` must map course IDs to final letter grades. Courses without
+a supplied grade are not guessed or treated as zero. Returns None when no
+valid graded courses are available.
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

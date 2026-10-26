@@ -1,0 +1,52 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: build_recommendations_pdf()
+SOURCE FILE: streamlit_app.py
+SOURCE LINE (before adding documentation comments): 208
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/streamlit_app.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Creates a downloadable PDF containing the recommendation results.
+
+2. WHY DOES THE PROJECT NEED IT?
+Uses ReportLab to format student information and recommended courses as a document in memory.
+
+3. INPUTS / PARAMETERS
+result: dict
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Checks whether not REPORTLAB_AVAILABLE.
+2. Prepares student for later processing.
+3. Prepares status for later processing.
+4. Prepares recommendations for later processing.
+5. Prepares buffer for later processing.
+6. Prepares document for later processing.
+7. Prepares styles for later processing.
+8. Prepares story for later processing.
+9. Prepares gpa for later processing.
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+bytes
+Observed return expressions:
+- buffer.getvalue()
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+result.get, BytesIO, SimpleDocTemplate, getSampleStyleSheet, styles.add, student.get, Table, summary_table.setStyle, story.extend, rec_table.setStyle, story.append, document.build, buffer.getvalue, RuntimeError, ParagraphStyle, Paragraph
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+ReportLab must be installed; the PDF depends on the keys present in the recommendation result.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Create a multi-page PDF containing the complete recommendation list.
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

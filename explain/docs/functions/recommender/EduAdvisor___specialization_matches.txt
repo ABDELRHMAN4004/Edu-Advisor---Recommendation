@@ -1,0 +1,56 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: EduAdvisor._specialization_matches()
+SOURCE FILE: recommender.py
+SOURCE LINE (before adding documentation comments): 130
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/recommender.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Checks whether a course belongs to the selected student specialization.
+
+2. WHY DOES THE PROJECT NEED IT?
+Reads explicit specialization tags when available; otherwise uses the category and course-code prefix as a fallback.
+
+3. INPUTS / PARAMETERS
+course, specialization: str, course_id: str
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Prepares selected for later processing.
+2. Checks whether selected in {'', 'GENERAL'}.
+3. Prepares raw for later processing.
+4. Checks whether isinstance(raw, str).
+5. Checks whether tags.
+6. Prepares category for later processing.
+7. Loops through ('IS', 'CS', 'AI').
+8. Checks whether 'SPECIALIZATION' in category or 'SPECIALISATION' in category or 'MAJOR' in category.
+9. Returns True.
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+bool
+Observed return expressions:
+- True
+- True
+- selected in tags or 'GENERAL' in tags or 'ALL' in tags
+- selected == code
+- selected == code_prefix
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+str(specialization or 'General').strip().upper, course.get, isinstance, str(course.get('Category', '')).upper, str(course_id).strip().upper, next, str(specialization or 'General').strip, part.strip().upper, set, str, any, raw.replace('/', ',').replace(';', ',').split, part.strip, str(part).strip().upper, str(course_id).strip, str(part).strip
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+Missing specialization tags can make the filter more permissive than expected.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Filter specialization-tagged courses when the catalog provides tags.
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

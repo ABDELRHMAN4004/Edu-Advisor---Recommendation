@@ -1,0 +1,49 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: EduAdvisor.search_courses_by_name()
+SOURCE FILE: recommender.py
+SOURCE LINE (before adding documentation comments): 657
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/recommender.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Finds courses whose English names contain a search phrase.
+
+2. WHY DOES THE PROJECT NEED IT?
+Performs a case-insensitive substring search and returns matching course details.
+
+3. INPUTS / PARAMETERS
+self, search_term: str
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Prepares term for later processing.
+2. Checks whether not term.
+3. Prepares results for later processing.
+4. Loops through sorted(self.all_courses).
+5. Returns results.
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+List[Dict]
+Observed return expressions:
+- results
+- []
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+str(search_term).strip().casefold, sorted, self.get_course_info, str(search_term).strip, results.append, str(info['course_name']).casefold, str
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+An empty search phrase returns an empty list.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Search course names case-insensitively; returns course dictionaries.
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

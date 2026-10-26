@@ -1,0 +1,51 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: display_recommendations()
+SOURCE FILE: streamlit_app.py
+SOURCE LINE (before adding documentation comments): 298
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/streamlit_app.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Shows the recommendation results inside the Streamlit interface.
+
+2. WHY DOES THE PROJECT NEED IT?
+Reads student and status values, draws summary metrics and recommendation tables, and offers a PDF download.
+
+3. INPUTS / PARAMETERS
+result: dict
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Prepares student for later processing.
+2. Prepares status for later processing.
+3. Prepares recs for later processing.
+4. Prepares cols for later processing.
+5. Prepares status_cols for later processing.
+6. Checks whether status.get('academic_warning').
+7. Checks whether not recs.
+8. Prepares rows for later processing.
+9. Checks whether REPORTLAB_AVAILABLE.
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+Not explicitly declared; see the return statements below.
+The function may update the UI or print results instead of returning a value.
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+result.get, st.subheader, st.columns, cols[0].metric, cols[1].metric, cols[2].metric, cols[3].metric, status_cols[0].metric, status.get, st.dataframe, student.get, status_cols[1].warning, status_cols[1].success, st.info, pd.DataFrame, st.warning
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+This is presentation code. A mobile/web frontend should render equivalent values from API responses.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+No original docstring is provided.
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

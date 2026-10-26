@@ -1,0 +1,50 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: EduAdvisor.search_course_by_name()
+SOURCE FILE: recommender.py
+SOURCE LINE (before adding documentation comments): 670
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/recommender.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Finds one course code using a code or name search.
+
+2. WHY DOES THE PROJECT NEED IT?
+Checks for an exact code match, then returns the first matching course name.
+
+3. INPUTS / PARAMETERS
+self, search_term: str
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Prepares term for later processing.
+2. Checks whether not term.
+3. Checks whether search_term in self.all_courses.
+4. Prepares matches for later processing.
+5. Returns matches[0]['course_id'] if matches else None.
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+Optional[str]
+Observed return expressions:
+- matches[0]['course_id'] if matches else None
+- None
+- search_term
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+str(search_term).strip().casefold, self.search_courses_by_name, str(search_term).strip, str
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+This is a simple lookup, not fuzzy matching or semantic search.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Return the closest simple substring match as a course ID, if any.
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

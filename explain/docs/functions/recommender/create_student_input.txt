@@ -1,0 +1,55 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: create_student_input()
+SOURCE FILE: recommender.py
+SOURCE LINE (before adding documentation comments): 742
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/recommender.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Creates a StudentInput object from plain Python values.
+
+2. WHY DOES THE PROJECT NEED IT?
+Passes student fields into the dataclass and replaces missing list/dictionary inputs with empty collections.
+
+3. INPUTS / PARAMETERS
+student_id: str, current_level: int, completed_credits: int, gpa: Optional[float], specialization: str, passed_courses: List[str], failed_courses: List[str], grades: Dict[str, str], retaken_courses: List[str]
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Returns StudentInput(student_id=student_id, current_level=current_level, completed_credits=completed_credits, gpa=gpa, specializ.
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+StudentInput
+Observed return expressions:
+- StudentInput(student_id=student_id, current_level=current_level, completed_credits=completed_credits, gpa=gpa, specialization=specialization, passed_courses=passed_courses or [], failed_courses=failed
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+StudentInput
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+This helper does not validate that every supplied course code exists.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Helper function to create a StudentInput object.
+
+Example:
+    student = create_student_input(
+        student_id="S0001",
+        current_level=2,
+        completed_credits=42,
+        gpa=2.8,
+        specialization="CS",
+        passed_courses=["BS101", "BS102", "CS101", "CS141"],
+        failed_courses=["BS103"]
+    )
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

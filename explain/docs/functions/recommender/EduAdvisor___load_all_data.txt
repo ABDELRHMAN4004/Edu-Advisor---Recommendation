@@ -1,0 +1,51 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: EduAdvisor._load_all_data()
+SOURCE FILE: recommender.py
+SOURCE LINE (before adding documentation comments): 58
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/recommender.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Reads the course catalog, prerequisites, and university rules from JSON files.
+
+2. WHY DOES THE PROJECT NEED IT?
+Converts the course dictionary into a pandas table; builds a separate prerequisites table; stores the rules and grade-point mapping.
+
+3. INPUTS / PARAMETERS
+self
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Prepares courses_file for later processing.
+2. Opens or manages a resource safely.
+3. Prepares courses_list for later processing.
+4. Loops through courses_data.items().
+5. Prepares self.courses for later processing.
+6. Prepares prereq_file for later processing.
+7. Opens or manages a resource safely.
+8. Prepares prereq_list for later processing.
+9. Loops through prereq_data.items().
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+None
+The function may update the UI or print results instead of returning a value.
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+courses_data.items, pd.DataFrame(courses_list).set_index, prereq_data.items, pd.DataFrame, self.rules.get, open, json.load, courses_list.append, prereq_list.append, info.get, self._normalize_course_type
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+Incorrect or missing JSON data will prevent startup or produce incorrect academic decisions.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Load all data from JSON files
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

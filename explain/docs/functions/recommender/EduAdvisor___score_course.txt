@@ -1,0 +1,52 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: EduAdvisor._score_course()
+SOURCE FILE: recommender.py
+SOURCE LINE (before adding documentation comments): 370
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/recommender.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Calculates the internal priority score for one eligible course.
+
+2. WHY DOES THE PROJECT NEED IT?
+Adds or subtracts points for retakes, course type, student level, GPA, future-course unlocks, credits, graduation progress, and curriculum requirements.
+
+3. INPUTS / PARAMETERS
+self, course_id: str, student: StudentInput, passed: Set[str]
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Prepares course for later processing.
+2. Prepares score for later processing.
+3. Prepares reasons for later processing.
+4. Prepares is_retake for later processing.
+5. Checks whether is_retake.
+6. Checks whether course['Type'] == 'Required'.
+7. Prepares level_diff for later processing.
+8. Checks whether level_diff == 0.
+9. Prepares min_gpa for later processing.
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+Tuple[float, List[str], bool]
+Observed return expressions:
+- (score, reasons, is_retake)
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+self.rules.get, len, course.get, reasons.append, int, self.calculate_gpa, self.unlocks.get, min, category.lower().replace, category.lower, req.get
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+This score is not the final ordering rule by itself; category priority and retake status also affect ordering.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Score a course based on student profile and bylaws rules
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.

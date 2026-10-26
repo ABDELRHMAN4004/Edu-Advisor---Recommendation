@@ -1,0 +1,56 @@
+EDU ADVISOR — FUNCTION GUIDE
+====================================================================
+FUNCTION: extract_cumulative_gpa()
+SOURCE FILE: streamlit_app.py
+SOURCE LINE (before adding documentation comments): 126
+GITHUB SOURCE: https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/main/streamlit_app.py
+
+1. WHAT DOES THIS FUNCTION DO?
+Looks for a clearly labeled cumulative GPA in PDF text.
+
+2. WHY DOES THE PROJECT NEED IT?
+Normalizes Arabic/Persian digits, searches cumulative/overall GPA labels, avoids semester GPA labels, and accepts a single unambiguous value.
+
+3. INPUTS / PARAMETERS
+page_texts
+
+The function receives the values listed above. 'self' means the current
+EduAdvisor object, which contains the course catalog and academic rules.
+Optional arguments use their default values if the caller leaves them out.
+
+4. WHAT HAPPENS INSIDE? (SIMPLE WALKTHROUGH)
+1. Prepares text for later processing.
+2. Prepares text for later processing.
+3. Prepares text for later processing.
+4. Prepares lines for later processing.
+5. Prepares number for later processing.
+6. Prepares cumulative_labels for later processing.
+7. Prepares candidates for later processing.
+8. Loops through lines.
+9. Checks whether not candidates.
+
+The exact conditions and calculations are in the source function. Use this
+walkthrough to understand the flow before changing the code.
+
+5. OUTPUT / RETURN VALUE
+Not explicitly declared; see the return statements below.
+Observed return expressions:
+- unique[0] if len(unique) == 1 else None
+
+6. OTHER FUNCTIONS OR LIBRARIES IT USES
+'\n'.join, text.translate, re.sub, sorted, str.maketrans, re.sub('\\s+', ' ', line).strip, re.search, set, text.splitlines, float, candidates.append, len, match.group
+
+7. IMPORTANT NOTES / COMMON MISTAKES
+Returns None when no safe value can be identified; scanned PDFs need separate OCR support.
+
+8. ORIGINAL CODE DESCRIPTION (IF PROVIDED)
+Best-effort extraction of the cumulative GPA explicitly printed on a transcript.
+
+Only accepts values associated with cumulative/overall GPA labels, or a plain
+GPA label that is not marked as semester/term GPA. Returns None when ambiguous.
+This is text extraction only; scanned image PDFs require OCR and are not guessed.
+
+9. WHERE TO FIND IT
+Open the source file shown at the top, search for the function name, and
+read this guide together with the implementation. If you change the function,
+update this text file in the same pull request.
