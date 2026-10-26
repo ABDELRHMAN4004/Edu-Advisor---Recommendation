@@ -113,10 +113,7 @@ edu_advisor_fastapi/
 
 - `https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/master/explain/docs/functions/recommender/`
 - `https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/master/explain/docs/functions/streamlit_app/`
-
-أمثلة: [`EduAdvisor__recommend.txt`](https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/master/explain/docs/functions/recommender/EduAdvisor__recommend.txt) و[`build_recommendations_pdf.txt`](https://github.com/ABDELRHMAN4004/Edu-Advisor---Recommendation/blob/master/explain/docs/functions/streamlit_app/build_recommendations_pdf.txt).
-
-**مهم:** دي مسارات متوقعة حسب ملفات التوثيق في أرشيف المشروع؛ لازم الملفات تكون مرفوعة فعلًا على فرع `master` عشان الروابط تفتح. في نسخة Streamlit اللي اتراجعت، الدوال `get_repeated_failure_advisories` و`bilingual_course_name` و`highlight_failed_rows` و`percentage_to_grade_points` ماكانش ليها ملفات شرح منفصلة ضمن ملفات التوثيق اللي اتطابقت، فماتضيفش ليها روابط متخمنة.
+- percentage_to_grade_points` ماكانش ليها ملفات شرح منفصلة ضمن ملفات التوثيق اللي اتطابقت، فماتضيفش ليها روابط متخمنة.
 
 ## 4) تشغّل المشروع عندك إزاي؟
 
