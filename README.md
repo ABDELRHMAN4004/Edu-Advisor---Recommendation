@@ -549,13 +549,15 @@ Avoid changing unrelated functions when implementing a specific feature.
 
 ## 20. Final Note from the Developer
 
-I have done my best to develop, organize, and document this project in a way that makes it easier for future developers to understand and continue working on it.
 
-The project may still contain limitations, areas that need improvement, or unintended mistakes. These were not intentional, and I hope the available documentation helps make any future improvements easier.
+في النهاية، حابب أقول إني حاولت قدر الإمكان أقدم أفضل حاجة أقدر عليها في المشروع ده، سواء في كتابة الكود أو تنظيمه أو توثيقه، عشان أسهّل المهمة على أي حد هيكمل الشغل بعدي.
 
-My goal was to leave behind something useful that others can build upon and improve.
+أكيد المشروع مش كامل، وممكن تكون فيه حاجات محتاجة تحسين، أو أجزاء صعبة في الفهم، أو حتى أخطاء غير مقصودة. لكن أحب أوضح إن كل ده مش عن إهمال، وإنما نتيجة حدود الوقت والخبرة والإمكانيات المتاحة ليا وقت التنفيذ.
 
-**Thank you, and best wishes to everyone continuing this project.**
+أتمنى إن المجهود اللي اتبذل يكون نقطة بداية كويسة للي هيكمل المشروع، وإنه يقدر يطوّره ويخليه أفضل بكتير.
+
+**وفي النهاية، إن أصبت فمن الله، وإن أخطأت فمن نفسي.**
+
 
 ---
 
